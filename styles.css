@@ -1,10 +1,11 @@
-/* styles.css - Anime cyber / fond sombre */
+/* styles.css - Anime cyber / Dév Gameplay */
 :root {
-    --bg-gradient: linear-gradient(135deg, #1a1a2e, #162447);
+    --bg-gradient: linear-gradient(135deg, #0a0a1f, #1a1a2e);
     --card-bg: rgba(255, 255, 255, 0.05);
     --accent: #ff3366; /* rose néon */
     --accent2: #6a5cff; /* violet pastel */
     --text: #ffffff;
+    --glow: 0 0 8px;
 }
 
 * {
@@ -30,7 +31,7 @@ header {
     header h1 {
         margin: 0 0 .25rem 0;
         font-size: 1.7rem;
-        text-shadow: 0 0 10px var(--accent2);
+        text-shadow: var(--glow) var(--accent2);
     }
 
 nav {
@@ -47,7 +48,7 @@ nav {
 
         nav a:hover {
             color: var(--accent);
-            text-shadow: 0 0 8px var(--accent);
+            text-shadow: var(--glow) var(--accent);
         }
 
 .hero {
@@ -59,7 +60,7 @@ nav {
         margin: .2rem 0;
         font-size: 1.6rem;
         color: var(--accent);
-        text-shadow: 0 0 8px var(--accent2);
+        text-shadow: var(--glow) var(--accent2);
     }
 
     .hero p {
@@ -79,7 +80,7 @@ nav {
         margin: 0 0 1rem 0;
         text-align: center;
         color: var(--accent2);
-        text-shadow: 0 0 10px var(--accent);
+        text-shadow: var(--glow) var(--accent);
     }
 
 .project-grid {
@@ -94,18 +95,20 @@ nav {
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    backdrop-filter: blur(4px);
 }
 
     .project-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(255,0,200,0.4);
+        box-shadow: 0 12px 24px rgba(255,0,200,0.5);
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .project-card h3 {
         margin: .1rem 0 .4rem 0;
         color: var(--accent);
-        text-shadow: 0 0 6px var(--accent2);
+        text-shadow: var(--glow) var(--accent2);
     }
 
     .project-card p {
@@ -129,7 +132,7 @@ nav {
 
         .footer a:hover {
             text-decoration: underline;
-            text-shadow: 0 0 6px var(--accent);
+            text-shadow: var(--glow) var(--accent);
         }
 
 /* Responsive */
@@ -152,3 +155,11 @@ a:focus {
 .project-card:hover {
     border-color: var(--accent2);
 }
+
+.project-card h3 {
+    transition: text-shadow 0.3s;
+}
+
+    .project-card h3:hover {
+        text-shadow: 0 0 12px var(--accent), 0 0 16px var(--accent2);
+    }
