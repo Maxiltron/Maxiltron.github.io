@@ -1,4 +1,4 @@
-/* styles.css - Anime cyber / Dév Gameplay */
+/* styles.css - Anime cyber / Dév Gameplay avec vidéos */
 :root {
     --bg-gradient: linear-gradient(135deg, #0a0a1f, #1a1a2e);
     --card-bg: rgba(255, 255, 255, 0.05);
@@ -109,12 +109,33 @@ nav {
         margin: .1rem 0 .4rem 0;
         color: var(--accent);
         text-shadow: var(--glow) var(--accent2);
+        transition: text-shadow 0.3s;
     }
+
+        .project-card h3:hover {
+            text-shadow: 0 0 12px var(--accent), 0 0 16px var(--accent2);
+        }
 
     .project-card p {
         margin: 0 0 .6rem 0;
         color: #ccc;
     }
+
+    /* Styles pour vidéos et iframes */
+    .project-card video,
+    .project-card iframe {
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 0.6rem;
+        box-shadow: 0 6px 18px rgba(255,0,200,0.3);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+        .project-card video:hover,
+        .project-card iframe:hover {
+            box-shadow: 0 8px 24px rgba(255,0,255,0.5);
+            transform: scale(1.02);
+        }
 
 .footer {
     text-align: center;
@@ -155,11 +176,3 @@ a:focus {
 .project-card:hover {
     border-color: var(--accent2);
 }
-
-.project-card h3 {
-    transition: text-shadow 0.3s;
-}
-
-    .project-card h3:hover {
-        text-shadow: 0 0 12px var(--accent), 0 0 16px var(--accent2);
-    }
