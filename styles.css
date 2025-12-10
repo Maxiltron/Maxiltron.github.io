@@ -31,8 +31,13 @@ header {
     header h1 {
         margin: 0 0 .25rem 0;
         font-size: 1.7rem;
-        text-shadow: var(--glow) var(--accent2);
+        text-shadow: none; /* pas de néon par défaut */
+        transition: text-shadow 0.3s;
     }
+
+        header h1:hover {
+            text-shadow: 0 0 8px var(--accent2), 0 0 12px var(--accent);
+        }
 
 nav {
     margin-top: .5rem;
@@ -44,11 +49,12 @@ nav {
         margin: 0 .8rem;
         font-weight: 600;
         transition: 0.3s;
+        text-shadow: none; /* pas de glow par défaut */
     }
 
         nav a:hover {
             color: var(--accent);
-            text-shadow: var(--glow) var(--accent);
+            text-shadow: 0 0 8px var(--accent);
         }
 
 .hero {
@@ -60,8 +66,13 @@ nav {
         margin: .2rem 0;
         font-size: 1.6rem;
         color: var(--accent);
-        text-shadow: var(--glow) var(--accent2);
+        text-shadow: none; /* pas de néon par défaut */
+        transition: text-shadow 0.3s;
     }
+
+        .hero h2:hover {
+            text-shadow: 0 0 8px var(--accent2), 0 0 12px var(--accent);
+        }
 
     .hero p {
         max-width: 800px;
@@ -80,8 +91,13 @@ nav {
         margin: 0 0 1rem 0;
         text-align: center;
         color: var(--accent2);
-        text-shadow: var(--glow) var(--accent);
+        text-shadow: none; /* pas de néon par défaut */
+        transition: text-shadow 0.3s;
     }
+
+        .projects h2:hover {
+            text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
+        }
 
 .project-grid {
     display: grid;
@@ -103,12 +119,13 @@ nav {
         transform: translateY(-5px);
         box-shadow: 0 12px 24px rgba(255,0,200,0.5);
         background: rgba(255, 255, 255, 0.1);
+        border-color: var(--accent2);
     }
 
     .project-card h3 {
         margin: .1rem 0 .4rem 0;
         color: var(--accent);
-        text-shadow: var(--glow) var(--accent2);
+        text-shadow: none; /* pas de néon par défaut */
         transition: text-shadow 0.3s;
     }
 
@@ -149,11 +166,12 @@ nav {
     .footer a {
         color: var(--accent2);
         text-decoration: none;
+        transition: text-shadow 0.3s;
     }
 
         .footer a:hover {
             text-decoration: underline;
-            text-shadow: var(--glow) var(--accent);
+            text-shadow: 0 0 8px var(--accent);
         }
 
 /* Responsive */
@@ -167,12 +185,8 @@ nav {
     }
 }
 
-/* Animations et glow */
+/* Accessibilité */
 a:focus {
     outline: 2px dashed var(--accent);
     outline-offset: 3px;
-}
-
-.project-card:hover {
-    border-color: var(--accent2);
 }
