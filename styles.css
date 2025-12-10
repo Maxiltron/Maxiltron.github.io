@@ -5,7 +5,6 @@
     --accent: #ff3366; /* rose néon */
     --accent2: #6a5cff; /* violet pastel */
     --text: #ffffff;
-    --glow: 0 0 8px;
 }
 
 * {
@@ -48,7 +47,7 @@ nav {
         text-decoration: none;
         margin: 0 .8rem;
         font-weight: 600;
-        transition: 0.3s;
+        transition: 0.3s, text-shadow 0.3s;
         text-shadow: none; /* pas de glow par défaut */
     }
 
@@ -167,6 +166,7 @@ nav {
         color: var(--accent2);
         text-decoration: none;
         transition: text-shadow 0.3s;
+        text-shadow: none; /* pas de glow par défaut */
     }
 
         .footer a:hover {
