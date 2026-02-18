@@ -1,8 +1,8 @@
-/* styles.css - Anime cyber / Dév Gameplay avec vidéos */
+/* styles.css - Anime cyber / Dï¿½v Gameplay avec vidï¿½os */
 :root {
     --bg-gradient: linear-gradient(135deg, #0a0a1f, #1a1a2e);
     --card-bg: rgba(255, 255, 255, 0.05);
-    --accent: #ff3366; /* rose néon */
+    --accent: #ff3366; /* rose nï¿½on */
     --accent2: #6a5cff; /* violet pastel */
     --text: #ffffff;
 }
@@ -30,7 +30,7 @@ header {
     header h1 {
         margin: 0 0 .25rem 0;
         font-size: 1.7rem;
-        text-shadow: none; /* pas de néon par défaut */
+        text-shadow: none; /* pas de nï¿½on par dï¿½faut */
         transition: text-shadow 0.3s;
     }
 
@@ -48,7 +48,7 @@ nav {
         margin: 0 .8rem;
         font-weight: 600;
         transition: 0.3s, text-shadow 0.3s;
-        text-shadow: none; /* pas de glow par défaut */
+        text-shadow: none; /* pas de glow par dï¿½faut */
     }
 
         nav a:hover {
@@ -65,7 +65,7 @@ nav {
         margin: .2rem 0;
         font-size: 1.6rem;
         color: var(--accent);
-        text-shadow: none; /* pas de néon par défaut */
+        text-shadow: none; /* pas de nï¿½on par dï¿½faut */
         transition: text-shadow 0.3s;
     }
 
@@ -90,7 +90,7 @@ nav {
         margin: 0 0 1rem 0;
         text-align: center;
         color: var(--accent2);
-        text-shadow: none; /* pas de néon par défaut */
+        text-shadow: none; /* pas de nï¿½on par dï¿½faut */
         transition: text-shadow 0.3s;
     }
 
@@ -124,7 +124,7 @@ nav {
     .project-card h3 {
         margin: .1rem 0 .4rem 0;
         color: var(--accent);
-        text-shadow: none; /* pas de néon par défaut */
+        text-shadow: none; /* pas de nï¿½on par dï¿½faut */
         transition: text-shadow 0.3s;
     }
 
@@ -137,7 +137,7 @@ nav {
         color: #ccc;
     }
 
-    /* Styles pour vidéos et iframes */
+    /* Styles pour vidï¿½os et iframes */
     .project-card video,
     .project-card iframe {
         width: 100%;
@@ -166,7 +166,7 @@ nav {
         color: var(--accent2);
         text-decoration: none;
         transition: text-shadow 0.3s;
-        text-shadow: none; /* pas de glow par défaut */
+        text-shadow: none; /* pas de glow par dï¿½faut */
     }
 
         .footer a:hover {
@@ -174,6 +174,28 @@ nav {
             text-shadow: 0 0 8px var(--accent);
         }
 
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    box-shadow: 0 0 12px rgba(255, 0, 200, 0.4);
+    transition: 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(255, 0, 255, 0.7);
+    filter: brightness(1.15);
+}        
+        
+        
+        
 /* Responsive */
 @media (min-width: 900px) {
     header {
@@ -185,7 +207,7 @@ nav {
     }
 }
 
-/* Accessibilité */
+/* Accessibilitï¿½ */
 a:focus {
     outline: 2px dashed var(--accent);
     outline-offset: 3px;
